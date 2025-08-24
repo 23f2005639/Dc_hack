@@ -42,7 +42,7 @@ def train_all_gates():
             "history": perceptron.history
         }
         
-        print(f"✓ {gate_name} training completed - Accuracy: {accuracy*100:.1f}%")
+        print(f"{gate_name} training completed - Accuracy: {accuracy*100:.1f}%")
     
     return results
 
@@ -60,7 +60,7 @@ def display_results(results):
     gates = get_all_gates()
     
     for gate_name, info in results.items():
-        print(f"\n🔹 {gate_name} GATE:")
+        print(f"\n{gate_name} GATE:")
         print(f"   Truth Table: {gates[gate_name].tolist()}")
         print(f"   Predicted:   {info['pred']}")
         print(f"   Accuracy:    {info['acc']*100:.1f}%")
@@ -80,11 +80,11 @@ def visualize_results(results):
     print("=" * 40)
     
     # Plot learning curves
-    print("\n📊 Displaying learning curves...")
+    print("\nDisplaying learning curves...")
     plot_learning_curves(results)
     
     # Plot decision boundaries
-    print("\n📈 Displaying decision boundaries...")
+    print("\nDisplaying decision boundaries...")
     X = get_input_data()
     gates = get_all_gates()
     
@@ -113,14 +113,14 @@ def interactive_mode(results):
     
     while True:
         # Get gate choice
-        gate_choice = input("🔸 Enter gate (AND/OR/NAND/XOR) or 'exit': ").upper().strip()
+        gate_choice = input("Enter gate (AND/OR/NAND/XOR) or 'exit': ").upper().strip()
         
         if gate_choice == "EXIT":
-            print("👋 Goodbye!")
+            print("Goodbye!")
             break
             
         if gate_choice not in results:
-            print(f"❌ Invalid gate '{gate_choice}'! Available: {list(results.keys())}")
+            print(f"Invalid gate '{gate_choice}'! Available: {list(results.keys())}")
             continue
         
         try:
@@ -129,11 +129,11 @@ def interactive_mode(results):
             x2 = int(input("   Input 2 (0 or 1): "))
             
             if x1 not in [0, 1] or x2 not in [0, 1]:
-                print("❌ Inputs must be 0 or 1!")
+                print("Inputs must be 0 or 1!")
                 continue
                 
         except ValueError:
-            print("❌ Invalid input! Please enter 0 or 1.")
+            print("Invalid input! Please enter 0 or 1.")
             continue
         
         # Create perceptron with trained weights
@@ -144,14 +144,14 @@ def interactive_mode(results):
         # Make prediction
         output = perceptron.predict_single(np.array([x1, x2]))
         
-        print(f"✅ {gate_choice}({x1}, {x2}) = {output}")
+        print(f"{gate_choice}({x1}, {x2}) = {output}")
         print("-" * 30)
 
 def main():
     """
     Main function to run the complete perceptron training and testing pipeline
     """
-    print("🧠 PERCEPTRON LOGIC GATE TRAINER")
+    print("PERCEPTRON LOGIC GATE TRAINER")
     print("=" * 50)
     
     try:
@@ -168,9 +168,9 @@ def main():
         interactive_mode(results)
         
     except KeyboardInterrupt:
-        print("\n\n⚠️  Program interrupted by user")
+        print("\n\nProgram interrupted by user")
     except Exception as e:
-        print(f"\n❌ An error occurred: {str(e)}")
+        print(f"\nAn error occurred: {str(e)}")
 
 if __name__ == "__main__":
     main()
