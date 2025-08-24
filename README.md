@@ -116,77 +116,7 @@ Make sure you have Python 3.7 or higher installed with the following packages:
 pip install numpy matplotlib streamlit plotly pandas
 ```
 
-### Running Options
-
-#### 1. Command Line Interface
-For a comprehensive training session with visualizations:
+### Running of project
 ```bash
 python main.py
 ```
-This will:
-- Train perceptrons on all logic gates
-- Display training results and accuracy
-- Show decision boundary plots
-- Open interactive testing mode
-
-#### 2. Web Application
-For an interactive web-based experience:
-```bash
-python run_app.py
-```
-Or directly:
-```bash
-streamlit run streamlit_app.py
-```
-Then open your browser to `http://localhost:8501`
-
-The web app provides:
-- Real-time parameter adjustment
-- Interactive visualizations
-- Beautiful dashboard interface
-- Live prediction testing
-
-#### 3. Jupyter Notebook
-For educational exploration and experimentation:
-```bash
-jupyter notebook two_step_perceptron_for_XOR.ipynb
-```
-This notebook covers:
-- Basic perceptron concepts
-- XOR problem demonstration
-- Multi-layer perceptron solution
-- Interactive learning examples
-
-### Expected Results
-
-#### Linearly Separable Gates (AND, OR, NAND)
-- Should achieve 100% accuracy
-- Converge within 10-20 epochs
-- Clear decision boundaries visible in plots
-
-#### Non-linearly Separable Gate (XOR)
-- Single perceptron will not converge
-- Accuracy remains around 50-75%
-- Demonstrates the limitation of linear classifiers
-
-### Understanding the Output
-
-When you run the training, you will see:
-- **Accuracy**: Percentage of correct predictions
-- **Weights**: Learned parameters w₁ and w₂
-- **Bias**: Learned bias parameter b
-- **Epochs**: Number of training iterations needed
-- **Decision boundary**: Visual representation of the learned classifier
-
-The decision boundary equation is: `w₁x₁ + w₂x₂ + b = 0`
-
-### Educational Notes
-
-This project demonstrates fundamental machine learning concepts:
-- **Supervised learning**: Learning from labeled examples
-- **Linear classification**: Separating data with straight lines
-- **Gradient descent**: Iterative optimization process
-- **Overfitting vs. underfitting**: Balance between model complexity and performance
-- **Feature space**: How data is represented and classified
-
-The XOR problem specifically illustrates why deep learning (multi-layer networks) became necessary for solving complex, non-linear problems that single perceptrons cannot handle.
