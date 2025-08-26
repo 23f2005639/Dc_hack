@@ -119,3 +119,25 @@ Real-time animated visualization of neural network training:
 - **Multiple logic gates**: Visualize AND, OR, NAND, and XOR gate training
 - **Educational interface**: Clear legends and status indicators
 - **Smooth animations**: Optimized for learning and demonstration purposes
+
+
+
+
+## CONTRIBUTERS
+
+3rd Place at DC Hackathon
+
+Team Name- Common Man
+Team Members:-
+
+1) Shreyas Namdeo - 
+GitHub 
+https://github.com/23f2005639
+LinkedIn 
+https://www.linkedin.com/in/shreyas-namdeo-2119b0290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+
+2) Paranjay Sharma - 
+GitHub
+https://github.com/paranjay-s
+LinkedIn
+https://www.linkedin.com/in/paranjay-sharma-87ps?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
